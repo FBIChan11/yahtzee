@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+
+body {
+  background: rebeccapurple;
+}
+
+#box {
+  border: solid black;
+}
+
+p,a,button {
+  color: white;
+  background: black;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.row2 {
+  display: flex;
+  justify-content: center;
+}
+
+#onesText {
+  color:antiquewhite;
+  background: black;
+}
+
+#twosText {
+  color:antiquewhite;
+  background: black;
+}
+
+#threesText {
+  color:antiquewhite;
+  background: black;
+}
+
+#foursText {
+  color:antiquewhite;
+  background: black;
+}
+
+#fivesText {
+  color:antiquewhite;
+  background: black;
+}
+
+#sixesText {
+  color:antiquewhite;
+  background: black;
+}
+
+#some {
+  color:antiquewhite;
+  background: black;
+}
