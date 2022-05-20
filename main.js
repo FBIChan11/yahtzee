@@ -23,13 +23,9 @@ function roll() {
 
   } else {
     alert("You\'ve run out of rolls");
-    rolls = 4;
     
-    holdOneV = false;
-    holdTwoV = false;
-    holdThreeV = false;
-    holdFourV = false;
-    holdFiveV = false;
+    
+    reset();
   }
 
   dieImage();
@@ -44,20 +40,34 @@ function roll() {
     }, 250);
   }
 
-
+if (holdOneV == false) {
   var dieOne = Math.floor(Math.random() * 6) + 1;
-  var dieTwo = Math.floor(Math.random() * 6) + 1;
-  var dieThree = Math.floor(Math.random() * 6) + 1;
-  var dieFour = Math.floor(Math.random() * 6) + 1;
-  var dieFive = Math.floor(Math.random() * 6) + 1;
+}
+ 
+if (holdTwoV == false) {
+var dieTwo = Math.floor(Math.random() * 6) + 1;
+}
+  
+if (holdThreeV == false) {
+var dieThree = Math.floor(Math.random() * 6) + 1;
+}
+  
+if (holdFourV == false) {
+var dieFour = Math.floor(Math.random() * 6) + 1;
+}
+  
+if (holdFiveV == false) {
+var dieFive = Math.floor(Math.random() * 6) + 1;
+}
 
-  dice.push(dieOne);
+  
+dice.push(dieOne);
   dice.push(dieTwo);
   dice.push(dieThree);
   dice.push(dieFour);
   dice.push(dieFive);
 
-if (holdOneV == false) {
+
   if (dieOne == 1) {
     document.getElementById("die").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png/v1/fill/w_106,h_105,al_c,q_85,enc_auto/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png\">";
   } else if (dieOne == 2) {
@@ -71,11 +81,9 @@ if (holdOneV == false) {
   } else if (dieOne == 6) {
     document.getElementById("die").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png/v1/fill/w_109,h_115,al_c,q_85,enc_auto/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png\">";
   }
-} else {
 
-}
   
-if (holdTwoV == false) {  
+  
   if (dieTwo == 1) {
     document.getElementById("die2").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png/v1/fill/w_106,h_105,al_c,q_85,enc_auto/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png\">";
   } else if (dieTwo == 2) {
@@ -89,11 +97,8 @@ if (holdTwoV == false) {
   } else if (dieTwo == 6) {
     document.getElementById("die2").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png/v1/fill/w_109,h_115,al_c,q_85,enc_auto/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png\">";
   }
-} else {
 
-}
-  
-if (holdThreeV == false) {
+
   if (dieThree == 1) {
     document.getElementById("die3").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png/v1/fill/w_106,h_105,al_c,q_85,enc_auto/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png\">";
   } else if (dieThree == 2) {
@@ -107,9 +112,9 @@ if (holdThreeV == false) {
   } else if (dieThree == 6) {
     document.getElementById("die3").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png/v1/fill/w_109,h_115,al_c,q_85,enc_auto/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png\">";
   }
-}
 
-if (holdFourV == false) {
+
+
   if (dieFour == 1) {
     document.getElementById("die4").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png/v1/fill/w_106,h_105,al_c,q_85,enc_auto/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png\">";
   } else if (dieFour == 2) {
@@ -123,9 +128,9 @@ if (holdFourV == false) {
   } else if (dieFour == 6) {
     document.getElementById("die4").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png/v1/fill/w_109,h_115,al_c,q_85,enc_auto/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png\">";
   }
-}
 
-if (holdFiveV == false) {
+
+
   if (dieFive == 1) {
     document.getElementById("die5").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png/v1/fill/w_106,h_105,al_c,q_85,enc_auto/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png\">";
   } else if (dieFive == 2) {
@@ -139,7 +144,7 @@ if (holdFiveV == false) {
   } else if (dieFive == 6) {
     document.getElementById("die5").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png/v1/fill/w_109,h_115,al_c,q_85,enc_auto/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png\">";
   }
-}
+
 
 
 }
@@ -289,4 +294,15 @@ function holdFour() {
 
 function holdFive() {
   holdFiveV = true;
+}
+
+function reset() {
+    holdOneV = false;
+    holdTwoV = false;
+    holdThreeV = false;
+    holdFourV = false;
+    holdFiveV = false;
+
+    rolls = 3;
+    alert("Rolls Reset")
 }
