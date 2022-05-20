@@ -236,7 +236,13 @@ function btnSix() {
 
 
 function sum() {
-  
+  var totalSum = parseFloat(onesGlobal) + parseFloat(twosGlobal) + parseFloat(threesGlobal) + parseFloat(foursGlobal) + parseFloat(fiveGlobal) + parseFloat(sixGlobal);
+  if (totalSum > 63) {
+    document.getElementById("realbonus").innerHTML = 35;
+    document.getElementById("some").innerHTML = totalSum + 35;
+  } else {
+    document.getElementById("some").innerHTML = totalSum;
+  }
 }
 
 
