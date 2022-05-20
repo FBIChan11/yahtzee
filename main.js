@@ -24,6 +24,12 @@ function roll() {
   } else {
     alert("You\'ve run out of rolls");
     rolls = 4;
+    
+    holdOneV = false;
+    holdTwoV = false;
+    holdThreeV = false;
+    holdFourV = false;
+    holdFiveV = false;
   }
 
   dieImage();
@@ -264,22 +270,23 @@ function sum() {
   }
 }
 
+
 function holdOne() {
-  
+  holdOneV = true;
 }
 
 function holdTwo() {
-
+  holdTwoV = true;
 }
 
 function holdThree() {
-
+  holdThreeV = true;
 }
 
 function holdFour() {
-
+  holdFourV = true;
 }
 
 function holdFive() {
-
+  holdFiveV = true;
 }
