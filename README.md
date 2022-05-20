@@ -2,6 +2,6 @@
 
 
 TO DO LIST:
-1.) hold button for dice
-2.) more advanced rolls
-3.) special buttons
+1.) hold button for dice (In Progress)
+2.) more advanced rolls (Not Started)
+3.) special buttons (Not Started)
