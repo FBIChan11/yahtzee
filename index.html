@@ -74,7 +74,7 @@
       
       <div id="sumthin" style="margin: 50px; margin-bottom: 0px; padding: 0px;">
         <p id="sum" style="display: table-cell;">Sum</p>
-        <div id="some" class="row2">n/a</div>
+        <div id="some" class="row">n/a</div>
       </div>
       
       <div id="bonus">
@@ -90,24 +90,48 @@
     
     <div class="row2">
       
-      <button style="margin: 50px">Three of a Kind</button>
+      <div style="margin: 50px">
+        <button onclick="threeOfAKind()">Three of a Kind</button>
+        <div id="threeofakind">n/a</div>
+      </div>
       
-      <button style="margin: 50px">Four of a Kind</button>
+      <div style="margin: 50px">
+        <button onclick="fourOfAKind()">Four of a Kind</button>
+        <div id="fourofakind">n/a</div>
+      </div>
       
-      <button style="margin: 50px">Full House</button>
+      <div style="margin: 50px">
+        <button onclick="fullHouse()">Full House</button>
+        <div id="fullhouse">n/a</div>
+      </div>
       
-      <button style="margin: 50px">Small Straight</button>
+      <div style="margin: 50px">
+        <button onclick="smallStraight()">Small Straight</button>
+        <div id="smallstraight">n/a</div>
+      </div>
       
-      <button style="margin: 50px">Large Straight</button>
+      <div style="margin: 50px">
+        <button onclick="largeStraight()">Large Straight</button>
+        <div id="largestraight">n/a</div>
+      </div>
       
-      <button style="margin: 50px">Chance</button>
+      <div style="margin: 50px">
+        <button onclick="chance()">Chance</button>
+        <div id="chance">n/a</div>
+      </div>
       
-      <button style="margin: 50px">YAHTZEE</button>
+      <div style="margin: 50px">
+        <button onclick="yahtzee()">YAHTZEE</button>
+        <div id="yahtzee">n/a</div>
+      </div>
     
     </div>
     
     <div class="total-score">
       <p style="text-align: center;">TOTAL SCORE</p>
+      <div>
+        <p id="totalScore" style="text-align: center">n/a</p>
+      </div>
     </div>
   
   </body>
