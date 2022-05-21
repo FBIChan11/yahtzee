@@ -303,23 +303,23 @@ function sum() {
 }
 
 
-function holdOne(dieOne) {
+function holdOne() {
   holdOneV = true;
 }
 
-function holdTwo(dieTwo) {
+function holdTwo() {
   holdTwoV = true;
 }
 
-function holdThree(dieThree) {
+function holdThree() {
   holdThreeV = true;
 }
 
-function holdFour(dieFour) {
+function holdFour() {
   holdFourV = true;
 }
 
-function holdFive(dieFive) {
+function holdFive() {
   holdFiveV = true;
 }
 
