@@ -57,13 +57,40 @@ var dieFour = Math.floor(Math.random() * 6) + 1;
 var dieFive = Math.floor(Math.random() * 6) + 1;
 
 
-  
+if (holdOneV == false) {  
 dice.push(dieOne);
-  dice.push(dieTwo);
-  dice.push(dieThree);
-  dice.push(dieFour);
-  dice.push(dieFive);
+} else {
+  dice.splice([0]);
+  dice.push(unfunctionOne);
+}
+  
+if (holdTwoV == false) {
+dice.push(dieTwo);
+} else {
+  dice.splice([1]);
+  dice.push(unfunctionTwo);
+}
 
+if (holdThreeV == false) {
+dice.push(dieThree);
+} else {
+  dice.splice([2]);
+  dice.push(unfunctionThree);
+}
+  
+if (holdFourV == false) {
+dice.push(dieFour);
+} else {
+  dice.splice([3]);
+  dice.push(unfunctionFour);
+}
+  
+if (holdFiveV == false) {
+dice.push(dieFive);
+} else {
+  dice.splice([4]);
+  dice.push(unfunctionFive);
+}
 
   if (dieOne == 1) {
     unfunctionOne = 1;
