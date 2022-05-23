@@ -339,6 +339,7 @@ function reset() {
 
 function threeOfAKind() {
   // add total of all dice
+  
 }
 
 function fourOfAKind() {
@@ -346,7 +347,8 @@ function fourOfAKind() {
 }
 
 function fullHouse() {
-  //25
+  // 25
+
 }
 
 function smallStraight() {
@@ -355,6 +357,45 @@ function smallStraight() {
 
 function largeStraight() {
   // 40
+  for (i=0; i < dice.length; i+1) {
+    if (dice[i] === 1) {
+      if (dice[i] === 2) {
+        if (dice[i] === 3) {
+          if (dice[i] === 4) {
+            if (dice[i] === 5) {
+              document.getElementById("largestraight").innerHTML = 40;
+            } else {
+              document.getElementById("largestraight").innerHTML = 0;
+            }
+          } else {
+            document.getElementById("largestraight").innerHTML = 0;
+          }
+        } else {
+          document.getElementById("largestraight").innerHTML = 0;
+        }
+      } else {
+        document.getElementById("largestraight").innerHTML = 0;
+      }
+    } else if (dice[i] === 2) {
+      if (dice[i] === 3) {
+        if (dice[i] === 4) {
+          if (dice[i] === 5) {
+            if (dice[i] === 6) {
+              document.getElementById("largestraight").innerHTML = 40;
+            }
+          } else {
+            document.getElementById("largestraight").innerHTML = 0;
+          }
+        } else {
+          document.getElementById("largestraight").innerHTML = 0;
+        }
+      } else {
+        document.getElementById("largestraight").innerHTML = 0;
+      }
+    } else {
+      document.getElementById("largestraight").innerHTML = 0;
+    }
+  }
 }
 
 function chance() {
