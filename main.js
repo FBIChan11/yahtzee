@@ -14,11 +14,11 @@ var holdThreeV = false;
 var holdFourV = false;
 var holdFiveV = false;
 
-var unfunctionOne = null;
-var unfunctionTwo = null;
-var unfunctionThree = null;
-var unfunctionFour = null;
-var unfunctionFive = null;
+var dieOne;
+var dieTwo;
+var dieThree;
+var dieFour;
+var dieFive;
 
 function roll() {
 
@@ -46,156 +46,119 @@ function roll() {
     }, 250);
   }
 
-  var dieOne = Math.floor(Math.random() * 6) + 1;
-
- var dieTwo = Math.floor(Math.random() * 6) + 1;
-  
-var dieThree = Math.floor(Math.random() * 6) + 1;
-  
-var dieFour = Math.floor(Math.random() * 6) + 1;
-
-var dieFive = Math.floor(Math.random() * 6) + 1;
 
 
-if (holdOneV == false) {  
-dice.push(dieOne);
-} else {
-  dice.splice([0]);
-  dice.push(unfunctionOne);
-}
-  
-if (holdTwoV == false) {
-dice.push(dieTwo);
-} else {
-  dice.splice([1]);
-  dice.push(unfunctionTwo);
-}
+  if (holdOneV == false) {
+   dieOne = Math.floor(Math.random() * 6) + 1;
+  } else {
+    
+  }
+ 
+ if (holdTwoV == false) {
+  dieTwo = Math.floor(Math.random() * 6) + 1;
+ } else {
+
+ }
 
 if (holdThreeV == false) {
-dice.push(dieThree);
+ dieThree = Math.floor(Math.random() * 6) + 1;
 } else {
-  dice.splice([2]);
-  dice.push(unfunctionThree);
-}
-  
-if (holdFourV == false) {
-dice.push(dieFour);
-} else {
-  dice.splice([3]);
-  dice.push(unfunctionFour);
-}
-  
-if (holdFiveV == false) {
-dice.push(dieFive);
-} else {
-  dice.splice([4]);
-  dice.push(unfunctionFive);
+
 }
 
+if (holdFourV == false) {
+dieFour = Math.floor(Math.random() * 6) + 1;
+} else {
+
+}
+
+if (holdFiveV == false) {
+dieFive = Math.floor(Math.random() * 6) + 1;
+} else {
+
+}
+  
+dice.push(dieOne);
+dice.push(dieTwo);
+dice.push(dieThree);
+dice.push(dieFour);
+dice.push(dieFive);
+
+
   if (dieOne == 1) {
-    unfunctionOne = 1;
     document.getElementById("die").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png/v1/fill/w_106,h_105,al_c,q_85,enc_auto/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png\">";
   } else if (dieOne == 2) {
-    unfunctionOne = 2;
     document.getElementById("die").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_5b984a14dcd74d4d94aedb0ab060af7e~mv2.png/v1/fill/w_102,h_103,al_c,q_85,enc_auto/78acb0_5b984a14dcd74d4d94aedb0ab060af7e~mv2.png\">";
   } else if (dieOne == 3) {
-    unfunctionOne = 3;
     document.getElementById("die").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_0fd0785207d242a686549ec26104c7c2~mv2.png/v1/fill/w_109,h_108,al_c,q_85,enc_auto/78acb0_0fd0785207d242a686549ec26104c7c2~mv2.png\">";
   } else if (dieOne == 4) {
-    unfunctionOne = 4;
     document.getElementById("die").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4dea8f8389e84edb88f72af83f3fedaf~mv2.png/v1/fill/w_107,h_103,al_c,q_85,enc_auto/78acb0_4dea8f8389e84edb88f72af83f3fedaf~mv2.png\">";
   } else if (dieOne == 5) {
-    unfunctionOne = 5;
     document.getElementById("die").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_3a7dcf4902c347929ce2f58a2585e97e~mv2.png/v1/fill/w_103,h_105,al_c,q_85,enc_auto/78acb0_3a7dcf4902c347929ce2f58a2585e97e~mv2.png\">";
   } else if (dieOne == 6) {
-    unfunctionOne = 6;
     document.getElementById("die").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png/v1/fill/w_109,h_115,al_c,q_85,enc_auto/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png\">";
   }
 
   
   
   if (dieTwo == 1) {
-    unfunctionTwo = 1;
     document.getElementById("die2").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png/v1/fill/w_106,h_105,al_c,q_85,enc_auto/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png\">";
   } else if (dieTwo == 2) {
-    unfunctionTwo = 2;
     document.getElementById("die2").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_5b984a14dcd74d4d94aedb0ab060af7e~mv2.png/v1/fill/w_102,h_103,al_c,q_85,enc_auto/78acb0_5b984a14dcd74d4d94aedb0ab060af7e~mv2.png\">";
   } else if (dieTwo == 3) {
-    unfunctionTwo = 3;
     document.getElementById("die2").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_0fd0785207d242a686549ec26104c7c2~mv2.png/v1/fill/w_109,h_108,al_c,q_85,enc_auto/78acb0_0fd0785207d242a686549ec26104c7c2~mv2.png\">";
   } else if (dieTwo == 4) {
-    unfunctionTwo = 4;
     document.getElementById("die2").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4dea8f8389e84edb88f72af83f3fedaf~mv2.png/v1/fill/w_107,h_103,al_c,q_85,enc_auto/78acb0_4dea8f8389e84edb88f72af83f3fedaf~mv2.png\">";
   } else if (dieTwo == 5) {
-    unfunctionTwo = 5;
     document.getElementById("die2").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_3a7dcf4902c347929ce2f58a2585e97e~mv2.png/v1/fill/w_103,h_105,al_c,q_85,enc_auto/78acb0_3a7dcf4902c347929ce2f58a2585e97e~mv2.png\">";
   } else if (dieTwo == 6) {
-    unfunctionTwo = 6;
     document.getElementById("die2").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png/v1/fill/w_109,h_115,al_c,q_85,enc_auto/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png\">";
   }
 
 
   if (dieThree == 1) {
-    unfunctionThree = 1;
     document.getElementById("die3").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png/v1/fill/w_106,h_105,al_c,q_85,enc_auto/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png\">";
   } else if (dieThree == 2) {
-    unfunctionThree = 2;
     document.getElementById("die3").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_5b984a14dcd74d4d94aedb0ab060af7e~mv2.png/v1/fill/w_102,h_103,al_c,q_85,enc_auto/78acb0_5b984a14dcd74d4d94aedb0ab060af7e~mv2.png\">";
   } else if (dieThree == 3) {
-    unfunctionThree = 3;
     document.getElementById("die3").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_0fd0785207d242a686549ec26104c7c2~mv2.png/v1/fill/w_109,h_108,al_c,q_85,enc_auto/78acb0_0fd0785207d242a686549ec26104c7c2~mv2.png\">";
   } else if (dieThree == 4) {
-    unfunctionThree = 4;
     document.getElementById("die3").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4dea8f8389e84edb88f72af83f3fedaf~mv2.png/v1/fill/w_107,h_103,al_c,q_85,enc_auto/78acb0_4dea8f8389e84edb88f72af83f3fedaf~mv2.png\">";
   } else if (dieThree == 5) {
-    unfunctionThree = 5;
     document.getElementById("die3").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_3a7dcf4902c347929ce2f58a2585e97e~mv2.png/v1/fill/w_103,h_105,al_c,q_85,enc_auto/78acb0_3a7dcf4902c347929ce2f58a2585e97e~mv2.png\">";
   } else if (dieThree == 6) {
-    unfunctionThree = 6;
     document.getElementById("die3").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png/v1/fill/w_109,h_115,al_c,q_85,enc_auto/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png\">";
   }
 
 
 
   if (dieFour == 1) {
-    unfunctionFour = 1;
     document.getElementById("die4").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png/v1/fill/w_106,h_105,al_c,q_85,enc_auto/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png\">";
   } else if (dieFour == 2) {
-    unfunctionFour = 2;
     document.getElementById("die4").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_5b984a14dcd74d4d94aedb0ab060af7e~mv2.png/v1/fill/w_102,h_103,al_c,q_85,enc_auto/78acb0_5b984a14dcd74d4d94aedb0ab060af7e~mv2.png\">";
   } else if (dieFour == 3) {
-    unfunctionFour = 3;
     document.getElementById("die4").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_0fd0785207d242a686549ec26104c7c2~mv2.png/v1/fill/w_109,h_108,al_c,q_85,enc_auto/78acb0_0fd0785207d242a686549ec26104c7c2~mv2.png\">";
   } else if (dieFour == 4) {
-    unfunctionFour = 4;
     document.getElementById("die4").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4dea8f8389e84edb88f72af83f3fedaf~mv2.png/v1/fill/w_107,h_103,al_c,q_85,enc_auto/78acb0_4dea8f8389e84edb88f72af83f3fedaf~mv2.png\">";
   } else if (dieFour == 5) {
-    unfunctionFour = 5;
     document.getElementById("die4").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_3a7dcf4902c347929ce2f58a2585e97e~mv2.png/v1/fill/w_103,h_105,al_c,q_85,enc_auto/78acb0_3a7dcf4902c347929ce2f58a2585e97e~mv2.png\">";
   } else if (dieFour == 6) {
-    unfunctionFour = 6;
     document.getElementById("die4").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png/v1/fill/w_109,h_115,al_c,q_85,enc_auto/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png\">";
   }
 
 
 
   if (dieFive == 1) {
-    unfunctionFive = 1;
     document.getElementById("die5").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png/v1/fill/w_106,h_105,al_c,q_85,enc_auto/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png\">";
   } else if (dieFive == 2) {
-    unfunctionFive = 2;
     document.getElementById("die5").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_5b984a14dcd74d4d94aedb0ab060af7e~mv2.png/v1/fill/w_102,h_103,al_c,q_85,enc_auto/78acb0_5b984a14dcd74d4d94aedb0ab060af7e~mv2.png\">";
   } else if (dieFive == 3) {
-    unfunctionFive = 3;
     document.getElementById("die5").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_0fd0785207d242a686549ec26104c7c2~mv2.png/v1/fill/w_109,h_108,al_c,q_85,enc_auto/78acb0_0fd0785207d242a686549ec26104c7c2~mv2.png\">";
   } else if (dieFive == 4) {
-    unfunctionFive = 4;
     document.getElementById("die5").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4dea8f8389e84edb88f72af83f3fedaf~mv2.png/v1/fill/w_107,h_103,al_c,q_85,enc_auto/78acb0_4dea8f8389e84edb88f72af83f3fedaf~mv2.png\">";
   } else if (dieFive == 5) {
-    unfunctionFive = 5;
     document.getElementById("die5").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_3a7dcf4902c347929ce2f58a2585e97e~mv2.png/v1/fill/w_103,h_105,al_c,q_85,enc_auto/78acb0_3a7dcf4902c347929ce2f58a2585e97e~mv2.png\">";
   } else if (dieFive == 6) {
-    unfunctionFive = 6;
     document.getElementById("die5").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png/v1/fill/w_109,h_115,al_c,q_85,enc_auto/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png\">";
   }
 
@@ -332,22 +295,27 @@ function sum() {
 
 function holdOne() {
   holdOneV = true;
+  document.getElementById("die").classList.add("held");
 }
 
 function holdTwo() {
   holdTwoV = true;
+  document.getElementById("die2").classList.add("held");
 }
 
 function holdThree() {
   holdThreeV = true;
+  document.getElementById("die3").classList.add("held");
 }
 
 function holdFour() {
   holdFourV = true;
+  document.getElementById("die4").classList.add("held");
 }
 
 function holdFive() {
   holdFiveV = true;
+  document.getElementById("die5").classList.add("held");
 }
 
 function reset() {
@@ -359,6 +327,12 @@ function reset() {
 
     rolls = 3;
     alert("Rolls Reset")
+
+    document.getElementById("die").classList.remove("held");
+    document.getElementById("die2").classList.remove("held");
+    document.getElementById("die3").classList.remove("held");
+    document.getElementById("die4").classList.remove("held");
+    document.getElementById("die5").classList.remove("held");
 }
 
 // special buttons
@@ -385,10 +359,11 @@ function largeStraight() {
 
 function chance() {
   // score total of all five dice
+  document.getElementById("chance").innerHTML = parseFloat(dieOne) + parseFloat(dieTwo) + parseFloat(dieThree) + parseFloat(dieFour) + parseFloat(dieFive);
 }
 
 function yahtzee() {
-  if (unfunctionOne == unfunctionTwo == unfunctionThree == unfunctionFour == unfunctionFive) {
+  if (dieOne == dieTwo && dieTwo == dieThree && dieThree == dieFour && dieFour == dieFive) {
     document.getElementById("yahtzee").innerHTML = 50;
   } else {
     document.getElementById("yahtzee").innerHTML = 0;

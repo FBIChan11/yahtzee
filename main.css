@@ -97,3 +97,9 @@ p,a,button {
   color:antiquewhite;
   background: black;
 }
+
+.held {
+  border-color: red;
+  border-style: solid;
+  border-width: 7px;
+}
