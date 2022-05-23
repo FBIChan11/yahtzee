@@ -8,6 +8,14 @@ var foursGlobal = null;
 var fiveGlobal = null;
 var sixGlobal = null;
 
+var threeOfAKind = null;
+var fourOfAKind = null;
+var fullHouse = null;
+var smallStraight = null;
+var largeStraight = null;
+var chance = null;
+var yahtzee = null;
+
 var holdOneV = false;
 var holdTwoV = false;
 var holdThreeV = false;
@@ -183,6 +191,8 @@ function btnOne() {
 
   // set text to that value
   document.getElementById("onesText").innerHTML = ones * 1;
+
+reset();
 }
 
 function btnTwo() {
@@ -202,6 +212,8 @@ function btnTwo() {
 
   // set text to that value
   document.getElementById("twosText").innerHTML = twos * 2;
+
+reset();
 }
 
 function btnThree() {
@@ -221,6 +233,8 @@ function btnThree() {
 
   // set text to that value
   document.getElementById("threesText").innerHTML = threes * 3;
+
+reset();
 }
 
 function btnFour() {
@@ -240,6 +254,8 @@ function btnFour() {
 
   // set text to that value
   document.getElementById("foursText").innerHTML = fours * 4;
+
+  reset();
 }
 
 function btnFive() {
@@ -259,6 +275,8 @@ function btnFive() {
 
   // set text to that value
   document.getElementById("fivesText").innerHTML = fives * 5;
+
+  reset();
 }
 
 function btnSix() {
@@ -278,6 +296,8 @@ function btnSix() {
 
   // set text to that value
   document.getElementById("sixesText").innerHTML = sixes * 6;
+
+  reset();
 }
 
 
@@ -339,68 +359,33 @@ function reset() {
 
 function threeOfAKind() {
   // add total of all dice
-  
+  reset();
 }
 
 function fourOfAKind() {
   // add total of all dice
+  reset();
 }
 
 function fullHouse() {
   // 25
-
+  reset();
 }
 
 function smallStraight() {
   // 30
+  reset();
 }
 
 function largeStraight() {
   // 40
-  for (i=0; i < dice.length; i+1) {
-    if (dice[i] === 1) {
-      if (dice[i] === 2) {
-        if (dice[i] === 3) {
-          if (dice[i] === 4) {
-            if (dice[i] === 5) {
-              document.getElementById("largestraight").innerHTML = 40;
-            } else {
-              document.getElementById("largestraight").innerHTML = 0;
-            }
-          } else {
-            document.getElementById("largestraight").innerHTML = 0;
-          }
-        } else {
-          document.getElementById("largestraight").innerHTML = 0;
-        }
-      } else {
-        document.getElementById("largestraight").innerHTML = 0;
-      }
-    } else if (dice[i] === 2) {
-      if (dice[i] === 3) {
-        if (dice[i] === 4) {
-          if (dice[i] === 5) {
-            if (dice[i] === 6) {
-              document.getElementById("largestraight").innerHTML = 40;
-            }
-          } else {
-            document.getElementById("largestraight").innerHTML = 0;
-          }
-        } else {
-          document.getElementById("largestraight").innerHTML = 0;
-        }
-      } else {
-        document.getElementById("largestraight").innerHTML = 0;
-      }
-    } else {
-      document.getElementById("largestraight").innerHTML = 0;
-    }
-  }
+   reset(); 
 }
 
 function chance() {
   // score total of all five dice
   document.getElementById("chance").innerHTML = parseFloat(dieOne) + parseFloat(dieTwo) + parseFloat(dieThree) + parseFloat(dieFour) + parseFloat(dieFive);
+  reset();
 }
 
 function yahtzee() {
@@ -409,4 +394,5 @@ function yahtzee() {
   } else {
     document.getElementById("yahtzee").innerHTML = 0;
   }
+  reset();
 }
