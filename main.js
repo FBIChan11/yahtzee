@@ -8,13 +8,13 @@ var foursGlobal = null;
 var fiveGlobal = null;
 var sixGlobal = null;
 
-var threeOfAKind = null;
-var fourOfAKind = null;
-var fullHouse = null;
-var smallStraight = null;
-var largeStraight = null;
-var chance = null;
-var yahtzee = null;
+var threeOfAKindV = null;
+var fourOfAKindV = null;
+var fullHouseV = null;
+var smallStraightV = null;
+var largeStraightV = null;
+var chanceV = null;
+var yahtzeeV = null;
 
 var holdOneV = false;
 var holdTwoV = false;
@@ -359,40 +359,85 @@ function reset() {
 
 function threeOfAKind() {
   // add total of all dice
+
+  if (threeOfAKindV !== null && fourOfAKindV !== null && fullHouseV !== null && smallStraightV !== null && largeStraightV !== null && chanceV !== null && yahtzeeV !== null) {
+    bottomScore();
+  }
+  
   reset();
 }
 
 function fourOfAKind() {
   // add total of all dice
+  
+  if (threeOfAKindV !== null && fourOfAKindV !== null && fullHouseV !== null && smallStraightV !== null && largeStraightV !== null && chanceV !== null && yahtzeeV !== null) {
+    bottomScore();
+  }
+  
   reset();
 }
 
 function fullHouse() {
   // 25
+  
+  if (threeOfAKindV !== null && fourOfAKindV !== null && fullHouseV !== null && smallStraightV !== null && largeStraightV !== null && chanceV !== null && yahtzeeV !== null) {
+    bottomScore();
+  }
+  
   reset();
 }
 
 function smallStraight() {
   // 30
+  
+  if (threeOfAKindV !== null && fourOfAKindV !== null && fullHouseV !== null && smallStraightV !== null && largeStraightV !== null && chanceV !== null && yahtzeeV !== null) {
+    bottomScore();
+  }
+  
   reset();
 }
 
 function largeStraight() {
   // 40
-   reset(); 
+   
+  
+  
+  if (threeOfAKindV !== null && fourOfAKindV !== null && fullHouseV !== null && smallStraightV !== null && largeStraightV !== null && chanceV !== null && yahtzeeV !== null) {
+    bottomScore();
+  }
+  
+  reset(); 
 }
 
 function chance() {
   // score total of all five dice
   document.getElementById("chance").innerHTML = parseFloat(dieOne) + parseFloat(dieTwo) + parseFloat(dieThree) + parseFloat(dieFour) + parseFloat(dieFive);
+  chanceV = parseFloat(dieOne) + parseFloat(dieTwo) + parseFloat(dieThree) + parseFloat(dieFour) + parseFloat(dieFive);
+  
+  if (threeOfAKindV !== null && fourOfAKindV !== null && fullHouseV !== null && smallStraightV !== null && largeStraightV !== null && chanceV !== null && yahtzeeV !== null) {
+    bottomScore();
+  }
+  
   reset();
 }
 
 function yahtzee() {
   if (dieOne == dieTwo && dieTwo == dieThree && dieThree == dieFour && dieFour == dieFive) {
     document.getElementById("yahtzee").innerHTML = 50;
+    yahtzeeV = 50;
   } else {
     document.getElementById("yahtzee").innerHTML = 0;
+    yahtzeeV = 0;
+  }
+
+  if (threeOfAKindV !== null && fourOfAKindV !== null && fullHouseV !== null && smallStraightV !== null && largeStraightV !== null && chanceV !== null && yahtzeeV !== null) {
+    bottomScore();
   }
   reset();
+}
+
+function bottomScore() {
+  var realScore = totalSum + threeOfAKindV + fourOfAKindV + fullHouseV + smallStraightV + largeStraightV + chanceV + yahtzeeV; 
+  
+  document.getElementById("totalScore").innerHTML = realScore;
 }
