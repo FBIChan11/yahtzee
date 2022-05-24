@@ -535,7 +535,7 @@ function smallStraight() {
     }
   }
 
-  if (smlCounter == 4 && foundSmlStraight == true) {
+  if (smlCounter <= 4 && foundSmlStraight == true) {
     smallStraightV = 30;
     document.getElementById("smallstraight").innerHTML = smallStraightV;
   } else {
