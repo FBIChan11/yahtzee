@@ -37,8 +37,8 @@ function roll() {
 
   } else {
     alert("You\'ve run out of rolls");
-    
-    
+
+
     reset();
   }
 
@@ -57,40 +57,40 @@ function roll() {
 
 
   if (holdOneV == false) {
-   dieOne = Math.floor(Math.random() * 6) + 1;
+    dieOne = Math.floor(Math.random() * 6) + 1;
   } else {
-    
+
   }
- 
- if (holdTwoV == false) {
-  dieTwo = Math.floor(Math.random() * 6) + 1;
- } else {
 
- }
+  if (holdTwoV == false) {
+    dieTwo = Math.floor(Math.random() * 6) + 1;
+  } else {
 
-if (holdThreeV == false) {
- dieThree = Math.floor(Math.random() * 6) + 1;
-} else {
+  }
 
-}
+  if (holdThreeV == false) {
+    dieThree = Math.floor(Math.random() * 6) + 1;
+  } else {
 
-if (holdFourV == false) {
-dieFour = Math.floor(Math.random() * 6) + 1;
-} else {
+  }
 
-}
+  if (holdFourV == false) {
+    dieFour = Math.floor(Math.random() * 6) + 1;
+  } else {
 
-if (holdFiveV == false) {
-dieFive = Math.floor(Math.random() * 6) + 1;
-} else {
+  }
 
-}
-  
-dice.push(dieOne);
-dice.push(dieTwo);
-dice.push(dieThree);
-dice.push(dieFour);
-dice.push(dieFive);
+  if (holdFiveV == false) {
+    dieFive = Math.floor(Math.random() * 6) + 1;
+  } else {
+
+  }
+
+  dice.push(dieOne);
+  dice.push(dieTwo);
+  dice.push(dieThree);
+  dice.push(dieFour);
+  dice.push(dieFive);
 
 
   if (dieOne == 1) {
@@ -107,8 +107,8 @@ dice.push(dieFive);
     document.getElementById("die").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png/v1/fill/w_109,h_115,al_c,q_85,enc_auto/78acb0_4599d063854f418a92d061b9d30179c0~mv2.png\">";
   }
 
-  
-  
+
+
   if (dieTwo == 1) {
     document.getElementById("die2").innerHTML = "<img src=\"https://static.wixstatic.com/media/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png/v1/fill/w_106,h_105,al_c,q_85,enc_auto/78acb0_4dfa9de046f2422b9fc7ff8e675ae256~mv2.png\">";
   } else if (dieTwo == 2) {
@@ -192,7 +192,7 @@ function btnOne() {
   // set text to that value
   document.getElementById("onesText").innerHTML = ones * 1;
 
-reset();
+  reset();
 }
 
 function btnTwo() {
@@ -213,7 +213,7 @@ function btnTwo() {
   // set text to that value
   document.getElementById("twosText").innerHTML = twos * 2;
 
-reset();
+  reset();
 }
 
 function btnThree() {
@@ -234,7 +234,7 @@ function btnThree() {
   // set text to that value
   document.getElementById("threesText").innerHTML = threes * 3;
 
-reset();
+  reset();
 }
 
 function btnFour() {
@@ -339,42 +339,42 @@ function holdFive() {
 }
 
 function reset() {
-    holdOneV = false;
-    holdTwoV = false;
-    holdThreeV = false;
-    holdFourV = false;
-    holdFiveV = false;
+  holdOneV = false;
+  holdTwoV = false;
+  holdThreeV = false;
+  holdFourV = false;
+  holdFiveV = false;
 
-    rolls = 3;
-    alert("Rolls Reset")
+  rolls = 3;
+  alert("Rolls Reset")
 
-    document.getElementById("die").classList.remove("held");
-    document.getElementById("die2").classList.remove("held");
-    document.getElementById("die3").classList.remove("held");
-    document.getElementById("die4").classList.remove("held");
-    document.getElementById("die5").classList.remove("held");
+  document.getElementById("die").classList.remove("held");
+  document.getElementById("die2").classList.remove("held");
+  document.getElementById("die3").classList.remove("held");
+  document.getElementById("die4").classList.remove("held");
+  document.getElementById("die5").classList.remove("held");
 }
 
 // special buttons
 
 function threeOfAKind() {
   // add total of all dice
-var numberThatHasThree = 0;
-var foundThree = false;
-for (i = 0; i < dice.length; i++) {
-  var threeOfAKindC = 0;
-  var curNumber = dice[i]; // 5
-  for (j = 0; j < dice.length; j++) {
-    if (curNumber == dice[j]) {
-      threeOfAKindC += 1;
+  var numberThatHasThree = 0;
+  var foundThree = false;
+  for (i = 0; i < dice.length; i++) {
+    var threeOfAKindC = 0;
+    var curNumber = dice[i]; // 5
+    for (j = 0; j < dice.length; j++) {
+      if (curNumber == dice[j]) {
+        threeOfAKindC += 1;
+      }
     }
-  }
-  if (threeOfAKindC === 3) {
-    foundThree = true;
-    numberThatHasThree = curNumber;
-  }
+    if (threeOfAKindC === 3) {
+      foundThree = true;
+      numberThatHasThree = curNumber;
+    }
 
-}
+  }
   if (foundThree == true) {
     threeOfAKindV = dieOne + dieTwo + dieThree + dieFour + dieFive;
     document.getElementById("threeofakind").innerHTML = threeOfAKindV;
@@ -392,13 +392,13 @@ for (i = 0; i < dice.length; i++) {
 
 function fourOfAKind() {
   // add total of all dice
-  
+
   var numberThatHasFour = 0;
   var foundFour = false;
-  for (i=0; i<dice.length; i++) {
+  for (i = 0; i < dice.length; i++) {
     var fourOfAKindC = 0;
     var curNum = dice[i];
-    for (j=0; j<dice.length; j++) {
+    for (j = 0; j < dice.length; j++) {
       if (curNum == dice[j]) {
         fourOfAKindC += 1;
       }
@@ -416,55 +416,94 @@ function fourOfAKind() {
     fourOfAKindV = 0;
     document.getElementById("fourofakind").innerHTML = 0;
   }
-  
+
   if (threeOfAKindV !== null && fourOfAKindV !== null && fullHouseV !== null && smallStraightV !== null && largeStraightV !== null && chanceV !== null && yahtzeeV !== null) {
     bottomScore();
   }
-  
+
   reset();
 }
 
 function fullHouse() {
   // 25
-  
+  var fullHousePartOne = false;
+  var fullHouseOneNumber = 0;
+  for (i = 0; i < dice.length; i++) {
+    var fullHouseOneC = 0;
+    var fullHouseOneNum = dice[i]; // 5
+    for (j = 0; j < dice.length; j++) {
+      if (fullHouseOneNum == dice[j]) {
+        fullHouseOneC += 1;
+      }
+    }
+    if (fullHouseOneC === 3) {
+      fullHousePartOne = true;
+      fullHouseOneNumber = fullHouseOneNum;
+    }
+  }
+
+  var fullHousePartTwo = false;
+  var fullHouseTwoNumber = 0;
+  for (i = 0; i < dice.length; i++) {
+    var fullHouseTwoC = 0;
+    var fullHouseTwoNum = dice[i];
+    for (j = 0; j < dice.length; j++) {
+      if (fullHouseTwoNum == dice[j]) {
+        fullHouseTwoC += 1;
+      }
+    }
+    if (fullHouseTwoC === 2) {
+      fullHousePartTwo = true;
+      fullHouseTwoNumber = fullHouseTwoNum;
+    }
+  }
+
+  if (fullHousePartOne == true && fullHousePartTwo == true) {
+    fullHouseV = 25;
+    document.getElementById("fullhouse").innerHTML = fullHouseV;
+  } else {
+    fullHouseV = 0;
+    document.getElementById("fullhouse").innerHTML = 0;
+  }
+
   if (threeOfAKindV !== null && fourOfAKindV !== null && fullHouseV !== null && smallStraightV !== null && largeStraightV !== null && chanceV !== null && yahtzeeV !== null) {
     bottomScore();
   }
-  
+
   reset();
 }
 
 function smallStraight() {
   // 30
-  
+
   if (threeOfAKindV !== null && fourOfAKindV !== null && fullHouseV !== null && smallStraightV !== null && largeStraightV !== null && chanceV !== null && yahtzeeV !== null) {
     bottomScore();
   }
-  
+
   reset();
 }
 
 function largeStraight() {
   // 40
-   
-  
-  
+
+
+
   if (threeOfAKindV !== null && fourOfAKindV !== null && fullHouseV !== null && smallStraightV !== null && largeStraightV !== null && chanceV !== null && yahtzeeV !== null) {
     bottomScore();
   }
-  
-  reset(); 
+
+  reset();
 }
 
 function chance() {
   // score total of all five dice
   document.getElementById("chance").innerHTML = parseFloat(dieOne) + parseFloat(dieTwo) + parseFloat(dieThree) + parseFloat(dieFour) + parseFloat(dieFive);
   chanceV = parseFloat(dieOne) + parseFloat(dieTwo) + parseFloat(dieThree) + parseFloat(dieFour) + parseFloat(dieFive);
-  
+
   if (threeOfAKindV !== null && fourOfAKindV !== null && fullHouseV !== null && smallStraightV !== null && largeStraightV !== null && chanceV !== null && yahtzeeV !== null) {
     bottomScore();
   }
-  
+
   reset();
 }
 
@@ -484,7 +523,7 @@ function yahtzee() {
 }
 
 function bottomScore() {
-  var realScore = totalSum + threeOfAKindV + fourOfAKindV + fullHouseV + smallStraightV + largeStraightV + chanceV + yahtzeeV; 
-  
+  var realScore = totalSum + threeOfAKindV + fourOfAKindV + fullHouseV + smallStraightV + largeStraightV + chanceV + yahtzeeV;
+
   document.getElementById("totalScore").innerHTML = realScore;
 }
