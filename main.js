@@ -476,6 +476,73 @@ function fullHouse() {
 function smallStraight() {
   // 30
 
+  var foundSmlStraight = false;
+  let smlCounter = 0;
+  dice.sort(function (a, b){return a - b});
+
+  for (i=0; i < dice.length; i++) {
+    if (dice[0] === 1 && foundSmlStraight == false) {
+      if (dice[i] === 1) {
+        smlCounter++;
+        if (dice[i] === 2) {
+          smlCounter++;
+          if (dice[i] === 3) {
+            smlCounter++;
+            if (dice[i] === 4) {
+              smlCounter++;
+              foundSmlStraight = true;
+            }
+          }
+          
+        }
+        
+      }
+     
+    } else if (dice[0] === 2 && foundSmlStraight == false) {
+      if (dice[i] === 2) {
+        smlCounter++;
+        if (dice[i] === 3) {
+          smlCounter++;
+          if (dice[i] === 4) {
+            smlCounter++;
+            if (dice[i] === 5) {
+              smlCounter++;
+              foundSmlStraight = false;
+            }
+          }
+         
+        }
+        
+      }
+      
+    } else if (dice[0] === 3 && foundSmlStraight == false) {
+      if (dice[i] === 3) {
+        smlCounter++;
+        if (dice[i] === 4) {
+          smlCounter++;
+          if (dice[i] === 5) {
+            smlCounter++;
+            if (dice[i] === 6) {
+              smlCounter++;
+              foundSmlStraight = true;
+            }
+          }
+          
+        }
+        
+      }
+      
+    }
+  }
+
+  if (smlCounter == 4 && foundSmlStraight == true) {
+    smallStraightV = 30;
+    document.getElementById("smallstraight").innerHTML = smallStraightV;
+  } else {
+    smallStraightV = 0;
+    document.getElementById("smallstraight").innerHTML = 0;
+  }
+  
   if (threeOfAKindV !== null && fourOfAKindV !== null && fullHouseV !== null && smallStraightV !== null && largeStraightV !== null && chanceV !== null && yahtzeeV !== null) {
     bottomScore();
   }
@@ -485,8 +552,55 @@ function smallStraight() {
 
 function largeStraight() {
   // 40
+  var foundLrgStraight = false;
+  let lrgCounter = 0;
+  dice.sort(function (a, b){return a - b});
+  
+  for (i=0; i < dice.length; i++) {
+    if (dice[0] === 1) {
+    if (dice[i] === 1) {
+      lrgCounter++;
+    }
+    if (dice[i] === 2) {
+      lrgCounter++;
+    }
+    if (dice[i] === 3) {
+      lrgCounter++;
+    }
+    if (dice[i] === 4) {
+      lrgCounter++;
+    }
+    if (dice[i] === 5) {
+      lrgCounter++;
+      foundLrgStraight = true;
+    }
+  } else if (dice[0] === 2) {
+    if (dice[i] === 2) {
+      lrgCounter++;
+    }
+    if (dice[i] === 3) {
+      lrgCounter++;
+    }
+    if (dice[i] === 4) {
+      lrgCounter++;
+    }
+    if (dice[i] === 5) {
+      lrgCounter++;
+    }
+    if (dice[i] === 6) {
+      lrgCounter++;
+      foundLrgStraight = true;
+    }
+  }
+}
 
-
+if (lrgCounter == 5 && foundLrgStraight == true) {
+  largeStraightV = 40;
+  document.getElementById("largestraight").innerHTML = largeStraightV;
+} else {
+  largeStraightV = 0;
+  document.getElementById("largestraight").innerHTML = 0;
+}
 
   if (threeOfAKindV !== null && fourOfAKindV !== null && fullHouseV !== null && smallStraightV !== null && largeStraightV !== null && chanceV !== null && yahtzeeV !== null) {
     bottomScore();
