@@ -339,6 +339,21 @@ function reset() {
 
 function threeOfAKind() {
   // add total of all dice
+  let numWithThree = 0;
+  let foundThree = false;
+  for (i=0; i< dice.length; i++) {
+    let counterOne = 0;
+    let curNum = x[i];
+    for (j=0; j < dice.length; j++) {
+      if (curNum == x[j]) {
+        counter += 1;
+      }
+    }
+  }
+  if (counter === 3) {
+    foundThree = true;
+    numWithThree = curNum;
+  }
 }
 
 function fourOfAKind() {
