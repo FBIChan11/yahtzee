@@ -361,25 +361,61 @@ function threeOfAKind() {
   // add total of all dice
 var numberThatHasThree = 0;
 var foundThree = false;
-for (i = 0; i < x.length; i++) {
-  var counter = 0;
-  var curNumber = x[i]; // 5
-  for (j = 0; j < x.length; j++) {
-    if (curNumber == x[j]) {
-      counter += 1;
+for (i = 0; i < dice.length; i++) {
+  var threeOfAKindC = 0;
+  var curNumber = dice[i]; // 5
+  for (j = 0; j < dice.length; j++) {
+    if (curNumber == dice[j]) {
+      threeOfAKindC += 1;
     }
   }
-  if (counter === 3) {
+  if (threeOfAKindC === 3) {
     foundThree = true;
     numberThatHasThree = curNumber;
   }
 
 }
+  if (foundThree == true) {
+    threeOfAKindV = dieOne + dieTwo + dieThree + dieFour + dieFive;
+    document.getElementById("threeofakind").innerHTML = threeOfAKindV;
+  } else {
+    threeOfAKindV = 0;
+    document.getElementById("threeofakind").innerHTML = 0;
+  }
 
+  if (threeOfAKindV !== null && fourOfAKindV !== null && fullHouseV !== null && smallStraightV !== null && largeStraightV !== null && chanceV !== null && yahtzeeV !== null) {
+    bottomScore();
+  }
+
+  reset();
 }
 
 function fourOfAKind() {
   // add total of all dice
+  
+  var numberThatHasFour = 0;
+  var foundFour = false;
+  for (i=0; i<dice.length; i++) {
+    var fourOfAKindC = 0;
+    var curNum = dice[i];
+    for (j=0; j<dice.length; j++) {
+      if (curNum == dice[j]) {
+        fourOfAKindC += 1;
+      }
+    }
+    if (fourOfAKindC === 4) {
+      foundFour = true;
+      numberThatHasFour = curNum;
+    }
+
+  }
+  if (foundFour == true) {
+    fourOfAKindV = dieOne + dieTwo + dieThree + dieFour + dieFive;
+    document.getElementById("fourofakind").innerHTML = fourOfAKindV;
+  } else {
+    fourOfAKindV = 0;
+    document.getElementById("fourofakind").innerHTML = 0;
+  }
   
   if (threeOfAKindV !== null && fourOfAKindV !== null && fullHouseV !== null && smallStraightV !== null && largeStraightV !== null && chanceV !== null && yahtzeeV !== null) {
     bottomScore();
