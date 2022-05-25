@@ -305,7 +305,7 @@ function btnSix() {
 
 
 function sum() {
-  var totalSum = parseFloat(onesGlobal) + parseFloat(twosGlobal) + parseFloat(threesGlobal) + parseFloat(foursGlobal) + parseFloat(fiveGlobal) + parseFloat(sixGlobal);
+  totalSum = parseFloat(onesGlobal) + parseFloat(twosGlobal) + parseFloat(threesGlobal) + parseFloat(foursGlobal) + parseFloat(fiveGlobal) + parseFloat(sixGlobal);
   if (totalSum >= 63) {
     document.getElementById("realbonus").innerHTML = 35;
     document.getElementById("some").innerHTML = totalSum + 35;
@@ -630,7 +630,7 @@ function yahtzee() {
 }
 
 function bottomScore() {
-  var realScore = totalSum + threeOfAKindV + fourOfAKindV + fullHouseV + smallStraightV + largeStraightV + chanceV + yahtzeeV;
+  var realScore = parseFloat(totalSum) + parseFloat(threeOfAKindV) + parseFloat(fourOfAKindV) + parseFloat(fullHouseV) + parseFloat(smallStraightV) + parseFLoat(largeStraightV) + parseFloat(chanceV) + parseFloat(yahtzeeV);
 
   document.getElementById("totalScore").innerHTML = realScore;
 }
