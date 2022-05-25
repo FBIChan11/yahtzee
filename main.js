@@ -28,6 +28,8 @@ var dieThree;
 var dieFour;
 var dieFive;
 
+var totalSum;
+
 function roll() {
 
   dice = [];
