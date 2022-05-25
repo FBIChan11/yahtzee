@@ -484,58 +484,49 @@ function smallStraight() {
     if (dice[0] === 1 && foundSmlStraight == false) {
       if (dice[i] === 1) {
         smlCounter++;
-        if (dice[i] === 2) {
-          smlCounter++;
-          if (dice[i] === 3) {
-            smlCounter++;
-            if (dice[i] === 4) {
-              smlCounter++;
-              foundSmlStraight = true;
-            }
-          }
-          
-        }
-        
       }
-     
+      if (dice[i] === 2) {
+        smlCounter++;
+      }
+      if (dice[i] === 3) {
+        smlCounter++;
+      }
+      if (dice[i] === 4) {
+        smlCounter++;
+        foundSmlStraight = true;
+      }
     } else if (dice[0] === 2 && foundSmlStraight == false) {
       if (dice[i] === 2) {
         smlCounter++;
-        if (dice[i] === 3) {
-          smlCounter++;
-          if (dice[i] === 4) {
-            smlCounter++;
-            if (dice[i] === 5) {
-              smlCounter++;
-              foundSmlStraight = false;
-            }
-          }
-         
-        }
-        
       }
-      
+      if (dice[i] === 3) {
+        smlCounter++;
+      }
+      if (dice[i] === 4) {
+        smlCounter++;
+      }
+      if (dice[i] === 5) {
+        smlCounter++;
+        foundSmlStraight = false;
+      }
     } else if (dice[0] === 3 && foundSmlStraight == false) {
       if (dice[i] === 3) {
         smlCounter++;
-        if (dice[i] === 4) {
-          smlCounter++;
-          if (dice[i] === 5) {
-            smlCounter++;
-            if (dice[i] === 6) {
-              smlCounter++;
-              foundSmlStraight = true;
-            }
-          }
-          
-        }
-        
       }
-      
+      if (dice[i] === 4) {
+        smlCounter++;
+      }
+      if (dice[i] === 5) {
+        smlCounter++;
+      }
+      if (dice[i] === 6) {
+        smlCounter++;
+        foundSmlStraight = true;
+      }
     }
   }
 
-  if (smlCounter <= 4 && foundSmlStraight == true) {
+  if (smlCounter >= 4 && foundSmlStraight == true) {
     smallStraightV = 30;
     document.getElementById("smallstraight").innerHTML = smallStraightV;
   } else {
