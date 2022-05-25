@@ -30,6 +30,8 @@ var dieFive;
 
 var totalSum;
 
+var isFiveChecked;
+
 function roll() {
 
   dice = [];
@@ -336,8 +338,11 @@ function holdFour() {
 }
 
 function holdFive() {
+  
   holdFiveV = true;
   document.getElementById("die5").classList.add("held");
+
+  
 }
 
 function reset() {
@@ -371,7 +376,7 @@ function threeOfAKind() {
         threeOfAKindC += 1;
       }
     }
-    if (threeOfAKindC === 3) {
+    if (threeOfAKindC >= 3) {
       foundThree = true;
       numberThatHasThree = curNumber;
     }
@@ -405,7 +410,7 @@ function fourOfAKind() {
         fourOfAKindC += 1;
       }
     }
-    if (fourOfAKindC === 4) {
+    if (fourOfAKindC >= 4) {
       foundFour = true;
       numberThatHasFour = curNum;
     }
@@ -475,6 +480,7 @@ function fullHouse() {
   reset();
 }
 
+
 function smallStraight() {
   // 30
 
@@ -483,7 +489,7 @@ function smallStraight() {
   dice.sort(function (a, b){return a - b});
 
   for (i=0; i < dice.length; i++) {
-    if (dice[0] === 1 && foundSmlStraight == false) {
+    if (dice[0] === 1) {
       if (dice[i] === 1) {
         smlCounter++;
       }
@@ -497,7 +503,7 @@ function smallStraight() {
         smlCounter++;
         foundSmlStraight = true;
       }
-    } else if (dice[0] === 2 && foundSmlStraight == false) {
+    } else if (dice[0] === 2) {
       if (dice[i] === 2) {
         smlCounter++;
       }
@@ -509,9 +515,9 @@ function smallStraight() {
       }
       if (dice[i] === 5) {
         smlCounter++;
-        foundSmlStraight = false;
+        foundSmlStraight = true;
       }
-    } else if (dice[0] === 3 && foundSmlStraight == false) {
+    } else if (dice[0] === 3) {
       if (dice[i] === 3) {
         smlCounter++;
       }
@@ -630,7 +636,7 @@ function yahtzee() {
 }
 
 function bottomScore() {
-  var realScore = parseFloat(totalSum) + parseFloat(threeOfAKindV) + parseFloat(fourOfAKindV) + parseFloat(fullHouseV) + parseFloat(smallStraightV) + parseFLoat(largeStraightV) + parseFloat(chanceV) + parseFloat(yahtzeeV);
+  var realScore = parseFloat(totalSum) + parseFloat(threeOfAKindV) + parseFloat(fourOfAKindV) + parseFloat(fullHouseV) + parseFloat(smallStraightV) + parseFloat(largeStraightV) + parseFloat(chanceV) + parseFloat(yahtzeeV);
 
   document.getElementById("totalScore").innerHTML = realScore;
 }
